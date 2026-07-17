@@ -2,7 +2,9 @@
 <p align="center">
   <img src="Fig/over.png" width="850">
 </p>
+
 A **training-free** concept erasing method for **HunyuanDiT**. During sampling, it projects the text embedding onto a subspace and removes the direction of the target concept from the prompt representation, thereby suppressing the generation of the target concept (objects / styles / celebrities / NSFW, etc.) **without modifying model weights or any extra training**.
+
 ## Features
 
 - **Zero training**: no fine-tuning, no LoRA. Erasing happens purely at inference time via representation projection.
