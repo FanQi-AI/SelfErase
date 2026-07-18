@@ -1,0 +1,44 @@
+# ============================================================
+# Erase_hunyuan 依赖清单
+# Python 3.10 + CUDA 12.1（PyTorch 编译版本）
+# 建议先用 conda 创建环境，再用 pip 安装本文件
+#   conda create -n hunyuan python=3.10 -y
+#   conda activate hunyuan
+#   pip install -r requirements.txt
+# 注意：torch / torchvision 需匹配你机器的 CUDA 版本，
+#       下面固定的是本项目验证过的版本组合。
+# ============================================================
+
+# ---- 深度学习核心 ----
+torch==2.7.1
+torchvision==0.22.1
+torchaudio==2.1.0
+
+# ---- diffusers 生态（HunyuanDiT 管线所在）----
+diffusers==0.34.0
+transformers==4.53.1
+tokenizers==0.21.2
+accelerate==1.8.1
+huggingface-hub==0.33.2
+safetensors==0.5.3
+peft==0.16.0
+bitsandbytes==0.46.1
+
+# ---- 数值 / 图像 ----
+numpy==1.26.4
+pillow==11.1.0
+opencv-python-headless==4.12.0.88
+matplotlib==3.10.7
+
+# ---- 评测相关 ----
+nudenet==3.4.2            # NSFW 检测
+torch-fidelity==0.3.0     # FID 计算
+pycocotools==2.0.10
+ptflops==0.7.5            # FLOPs 统计
+
+# ---- 工具 / 杂项 ----
+tqdm==4.67.1
+loguru==0.7.3
+protobuf==6.31.1
+psutil==7.0.0
+pandas>=2.0
